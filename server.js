@@ -11,7 +11,7 @@ const apiRoutes = require("./routes/apiRoutes.js");
 
 
 
-const PORT = process.env.PORT || 3000;
+const PORT =  3000;
 
 const db = require("./models");
 
