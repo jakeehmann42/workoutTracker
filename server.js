@@ -6,7 +6,8 @@ const mongoose = require("mongoose");
 
 const path = require("path");
 
-const apiRoutes = require("../routes/apiRoutes.js");
+const apiRoutes = require ("./routes/apiRoutes")
+
 
 
 
