@@ -6,7 +6,7 @@ const mongoose = require("mongoose");
 
 const path = require("path");
 
-const apiRoutes = require("./routes/apiRoutes.js");
+const apiRoutes = require("../routes/apiRoutes.js");
 
 
 
@@ -27,7 +27,7 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/WorkoutLogger", { useNewUrlParser: true });
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/woorkout-logger", { useNewUrlParser: true });
 
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "./public/index.html"));
