@@ -6,13 +6,13 @@ const mongoose = require("mongoose");
 
 const path = require("path");
 
-const apiRoutes = require ("./routes/apiRoutes")
+const apiRoutes = require("./routes/apiRoutes")
 
 
 
 
 
-const PORT =  3000;
+const PORT = 3000;
 
 const db = require("./models");
 
@@ -28,7 +28,15 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/woorkout-logger", { useNewUrlParser: true });
+mongoose.connect(
+    process.env.MONGODB_URI || 'mongodb://localhost/woorkout-logger',
+    {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+        useCreateIndex: true,
+        useFindAndModify: false
+    }
+);
 
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "./public/index.html"));
