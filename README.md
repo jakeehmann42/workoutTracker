@@ -10,7 +10,7 @@ In this app we are using a mongo database to create a workout app that can track
 
 ## Creditors
 
-No creditors were present on this project.
+No creditors were present on this assignment.
 
 
 
